@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
+import Policy from "./components/Policy";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
 
 export default function Routes() {
   return (
@@ -8,6 +10,9 @@ export default function Routes() {
       <Route exact path="/">
         <Login />
       </Route>
-    </Switch>
+      <AuthenticatedRoute exact path="/policy">
+        <Policy />
+      </AuthenticatedRoute>
+    </Switch >
   );
 }
